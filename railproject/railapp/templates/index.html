@@ -1,0 +1,52 @@
+
+{% extends 'base.html' %}
+{% block content %}
+{% include 'navbar.html' %}
+	<div class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7 col-md-push-5">
+						<div class="booking-cta">
+							<h1>Find your destination</h1>
+							<p>We are the train and the tracks are the path our lives follow. In control at dispatch is God, and He is overseeing each of our movements and coordinating what happens.
+							</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-md-pull-7">
+						<div class="booking-form">
+							<form>
+								<div class="form-group">
+									<span class="form-label">Start Place</span>
+									<input class="form-control" type="text" placeholder="Enter a start place" required>
+								</div>
+								<div class="form-group">
+									<span class="form-label">End Place</span>
+									<input class="form-control" type="text" placeholder="Enter a end place" required>
+								</div>
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="form-group">
+											<span class="form-label">Arrival</span>
+											<input class="form-control" type="date" required>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<span class="form-label">Departure</span>
+											<input class="form-control" type="date" required>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-btn">
+									<button class="submit-btn">Check availability</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
