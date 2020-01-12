@@ -6,6 +6,7 @@ class Chat(Model):
     user = models.OneToOneField(User,on_delete=models.CASCADE)
     question = models.CharField(max_length=200)
     chat_ans = JSONField()
+    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.question

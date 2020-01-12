@@ -23,7 +23,7 @@ def login(request):
         if user:
             if user.is_active:
                 auth.login(request, user)
-                return render(request,'home.html')
+                return HttpResponseRedirect(reverse('home'))
         else:
             messages.error(request, "User does not exist.")
             return HttpResponseRedirect(reverse('login'))
@@ -47,7 +47,7 @@ def signup(request):
                 auth.login(request, user)
                 user.save()
 
-            return render(request,'home.html')
+            return HttpResponseRedirect(reverse('home'))
     else:
         return render(request,'signup.html')
 
@@ -58,6 +58,8 @@ def user_logout(request):
     auth.logout(request)
     return HttpResponseRedirect(reverse('home'))
 
+def home(request):
+    return render(request,'home.html')
 
 def chat_save(request):
     if request.method == 'POST':

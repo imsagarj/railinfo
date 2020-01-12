@@ -13,7 +13,7 @@ SECRET_KEY = 'gu0op$&qg)_4g=s^wr3+_=8q(dfs^w(be!c5)fgphk4bt&pv)$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition

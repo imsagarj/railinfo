@@ -10,6 +10,7 @@ urlpatterns = [
     url(r'^$',views.home,name='home'),
     path('login/',views.login,name='login'),
     url(r'^signup/$',views.signup,name='signup'),
-    url(r'^logout',views.user_logout,name="logout"),
+    url(r'^logout/$',views.user_logout,name="logout"),
+    url(r'^home/$',views.home,name="home"),
     url(r'^assets/(?P<path>.*)$', serve,{'document_root': settings.ASSETS}),
 ]
